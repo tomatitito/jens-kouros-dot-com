@@ -23,32 +23,30 @@ body {
 
 .header {
     position: absolute;
+    display: block;
     top: 10%;
     left: 5%;
-    color: white; /* Optional: for contrast */
-    background: rgba(
-        0,
-        0,
-        0,
-        0.3
-    ); /* Optional: subtle background for readability */
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.07em;
+    /* background: rgba(0, 0, 0, 0.3); */
     padding: 1rem 2rem;
     border-radius: 8px;
-    text-transform: uppercase;
+    width: 35vw; /* or any width you want */
 }
 
-.header-main {
-    display: block;
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 25px;
-    margin-bottom: 2px;
-    
-}
-
-.header-sub {
-    display: block;
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 7.5px;
+/* Position subtitle in the bottom-right quadrant */
+.subtitle-bottom {
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #f0f0f0;
+    letter-spacing: 0.25em;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    min-width: 250px;
+    max-width: 40vw;
+    text-align: right;
 }
