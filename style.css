@@ -1,0 +1,54 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+
+.background {
+    height: 100vh;
+    /* background-image: url(frontansicht.jpg); */
+    background-color: #667080;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: white; /* Optional: for contrast */
+    background: rgba(
+        0,
+        0,
+        0,
+        0.3
+    ); /* Optional: subtle background for readability */
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+.header-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 25px;
+    margin-bottom: 2px;
+    
+}
+
+.header-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 7.5px;
+}
