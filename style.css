@@ -16,10 +16,11 @@ body {
 }
 
 .background {
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(images/jkDSC_9050.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: repeat-y;
 }
 
 .header {
@@ -61,5 +62,77 @@ body {
     font-weight: 100;
     text-align: center;
     padding-bottom: 0.5rem;
+    position: relative;
+}
+
+/* Datenschutz and Impressum link styling */
+.datenschutz-link, .impressum-link {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #f0f0f0;
+    transition: color 0.3s ease;
+}
+
+.datenschutz-link:hover, .impressum-link:hover {
+    color: #ffffff;
+}
+
+/* Popup styling */
+.datenschutz-popup, .impressum-popup {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    max-width: 90vw;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    margin-bottom: 10px;
+}
+
+.datenschutz-popup.show, .impressum-popup.show {
+    display: block;
+}
+
+.popup-content {
+    color: white;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.popup-content h3 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+.popup-content p {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.popup-content strong {
+    color: #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .datenschutz-popup, .impressum-popup {
+        width: 320px;
+        padding: 15px;
+    }
     
+    .popup-content {
+        font-size: 0.8rem;
+    }
+    
+    .popup-content h3 {
+        font-size: 1rem;
+    }
 }

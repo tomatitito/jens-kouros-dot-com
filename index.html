@@ -15,8 +15,126 @@
         </main>
         <footer class="footer">
             <div class="impressum">
-                &copy; 2024 [Your address] [your@email.com]
+                &copy; 2025 |
+                <span class="impressum-link">Impressum</span> |
+                <span class="datenschutz-link">Datenschutz</span>
+                <div class="datenschutz-popup" id="datenschutz-popup">
+                    <div class="popup-content">
+                        <h3>Datenschutz / Privacy Policy</h3>
+                        <p>
+                            <strong>Verantwortlicher:</strong><br />
+                            Jens Kouros<br />
+                            Unteraicher Str. 44<br />
+                            E-Mail: contact@minipiffy.anonaddy.com
+                        </p>
+
+                        <p>
+                            <strong>Datenverarbeitung:</strong><br />
+                            Diese Website verarbeitet keine personenbezogenen
+                            Daten. Es werden keine Cookies gesetzt und keine
+                            Tracking-Tools verwendet.
+                        </p>
+
+                        <p>
+                            <strong>Server-Logs:</strong><br />
+                            Beim Besuch dieser Website können technische
+                            Informationen (IP-Adresse, Browser, Zeitpunkt)
+                            temporär in Server-Logs gespeichert werden.
+                        </p>
+
+                        <p>
+                            <strong>Kontakt:</strong><br />
+                            Bei Fragen zum Datenschutz kontaktieren Sie mich
+                            unter contact@minipiffy.anonaddy.com
+                        </p>
+                    </div>
+                </div>
+                <div class="impressum-popup" id="impressum-popup">
+                    <div class="popup-content">
+                        <h3>Impressum</h3>
+                        <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+                        <p>
+                            Jens Kouros<br />
+                            Unteraicher Str. 44<br />
+                            70567 Stuttgart<br />
+                            Deutschland
+                        </p>
+
+                        <p>
+                            <strong>Kontakt:</strong><br />
+                            <!-- Telefon: [Ihre Telefonnummer]<br /> -->
+                            E-Mail: contact@minipiffy.anonaddy.com
+                        </p>
+
+                        <p>
+                            <strong
+                                >Verantwortlich für den Inhalt nach § 55 Abs. 2
+                                RStV:</strong
+                            ><br />
+                            Jens Kouros<br />
+                            Unteraicher Str. 44<br />
+                            70567 Stuttgart
+                        </p>
+
+                    </div>
+                </div>
             </div>
         </footer>
+        <script>
+            // Get references to the elements
+            const datenschutzLink = document.querySelector(".datenschutz-link");
+            const datenschutzPopup =
+                document.getElementById("datenschutz-popup");
+            const impressumLink = document.querySelector(".impressum-link");
+            const impressumPopup = document.getElementById("impressum-popup");
+
+            // Datenschutz popup functionality
+            datenschutzLink.addEventListener("mouseenter", function () {
+                datenschutzPopup.classList.add("show");
+            });
+
+            datenschutzLink.addEventListener("mouseleave", function (e) {
+                setTimeout(() => {
+                    if (
+                        !datenschutzPopup.matches(":hover") &&
+                        !datenschutzLink.matches(":hover")
+                    ) {
+                        datenschutzPopup.classList.remove("show");
+                    }
+                }, 100);
+            });
+
+            datenschutzPopup.addEventListener("mouseenter", function () {
+                datenschutzPopup.classList.add("show");
+            });
+
+            datenschutzPopup.addEventListener("mouseleave", function () {
+                datenschutzPopup.classList.remove("show");
+            });
+
+            // Impressum popup functionality
+            impressumLink.addEventListener("mouseenter", function () {
+                impressumPopup.classList.add("show");
+            });
+
+            impressumLink.addEventListener("mouseleave", function (e) {
+                setTimeout(() => {
+                    if (
+                        !impressumPopup.matches(":hover") &&
+                        !impressumLink.matches(":hover")
+                    ) {
+                        impressumPopup.classList.remove("show");
+                    }
+                }, 100);
+            });
+
+            impressumPopup.addEventListener("mouseenter", function () {
+                impressumPopup.classList.add("show");
+            });
+
+            impressumPopup.addEventListener("mouseleave", function () {
+                impressumPopup.classList.remove("show");
+            });
+        </script>
     </body>
 </html>
